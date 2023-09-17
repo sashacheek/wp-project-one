@@ -1,0 +1,95 @@
+/* Sasha Cheek Sept 9 2023*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&display=swap');
+
+body {
+    background-image: url(img/background_img.avif);
+    height: 100vh;
+}
+
+form, form input, form select, div, span {
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+main {
+    height: 100vh;
+    width: 60%;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.wrapper {
+    padding: 3%;
+}
+
+form {
+    display: table;
+    width: 100%;
+}
+
+form div {
+    display: table-row;
+}
+
+form label {
+    display: table-cell;
+    padding: 0.5em;
+    text-align: right;
+    width: 40%;
+}
+
+form input {
+    display: table-cell;
+    margin: 0.5em 0;
+    box-sizing:border-box;
+}
+
+form span {
+    color: red;
+    font-size: 70%;
+    display: block;
+    margin-bottom: 0.5em;
+    width: 60%;
+}
+
+.button {
+    border: 3px solid #b7b9ab;
+    border-radius: 2px;
+    background-color: white;
+    padding: 4px 6px;
+}
+.button:hover{
+    box-shadow: 3px 3px #b7b9ab;
+    background-color: #fafaf9;
+}
+
+.output {
+    padding: 0.5em;
+    text-align: center;
+}
+
+@media screen and (max-width:500px) {
+    main {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:335px) {
+    form {
+        display: block;
+    }
+    
+    form div {
+        display: block;
+        margin: 0 0.5em;
+    }
+    
+    form label {
+        display: block;
+        text-align: left;
+    }
+    
+    form input {
+        display: block
+    }
+}
