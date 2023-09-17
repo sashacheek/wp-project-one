@@ -1,8 +1,28 @@
 // Sasha Cheek Sept 9 2023
 
 // Calculates the total cost of the order and displays it
-function calcTotal() {
+function calcTotal(valid) {
+        // Gets values for relevant order form fields
+    var quantity = document.getElementById("quantity").value;
+    var unit_price = document.getElementById("unit_price").value;
+    var discount_rate = document.getElementById("discount_rate").value;
+    var first_name = document.getElementById("first_name").value;
+    var last_name = document.getElementById("last_name").value;
 
+    // Displays order total only if all fields contain a valid value
+    if (valid) {
+        var discounted_amount = unit_price * quantity * discount_rate * 0.01;
+        var order_total = quantity * unit_price - discounted_amount;
+    
+        document.getElementById("output").innerHTML = "Thank you for ordering, " + first_name + " " + last_name + ". Your order total is $" + order_total.toFixed(2) +".";
+    }
+    else {
+        document.getElementById("output").innerHTML = "Please fill out all fields and try again."
+    }
+
+}
+
+function validation() {
     // Gets values for all order form fields
     var product = document.getElementById("product").value;
     var quantity = document.getElementById("quantity").value;
@@ -109,24 +129,14 @@ function calcTotal() {
         document.getElementById("err10").innerHTML = ""
     }
 
-    // Displays order total only if all fields contain a valid value
-    if (valid) {
-        var discounted_amount = unit_price * quantity * discount_rate * 0.01;
-        var order_total = quantity * unit_price - discounted_amount;
-    
-        document.getElementById("output").innerHTML = "Thank you for ordering, " + first_name + " " + last_name + ". Your order total is $" + order_total.toFixed(2) +".";
-    }
-    else {
-        document.getElementById("output").innerHTML = "Please fill out all fields and try again."
-    }
-
+    return valid;
 }
 
 function init()
 {
     var order_button = document.getElementById("order_button");
     if (order_button) {
-    order_button.onclick = function() {calcTotal()};
+    order_button.onclick = function() {calcTotal(validation())};
     }
 
     var login_button = document.getElementById("login-button");
