@@ -12,7 +12,7 @@ form, form input, form select, div, span {
 }
 
 main {
-    height: 100vh;
+    min-height: 100vh;
     width: 60%;
     background-color: white;
     margin: 0 auto;
@@ -36,9 +36,10 @@ form label {
     padding: 0.5em;
     text-align: right;
     width: 40%;
+    vertical-align: top;
 }
 
-form input {
+form input, form textarea, form select {
     display: table-cell;
     margin: 0.5em 0;
     box-sizing:border-box;
@@ -50,6 +51,12 @@ form span {
     display: block;
     margin-bottom: 0.5em;
     width: 60%;
+}
+
+#character_count {
+    color: gray;
+    text-align: right;
+    width: 100%;
 }
 
 .button {

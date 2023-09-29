@@ -7,6 +7,7 @@
     <title>Product Order</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="utilities.js"></script>
     <script src="product_order.js"></script>
 </head>
 <body>
@@ -63,6 +64,13 @@
                 <div>
                     <label for="security_code">Security Code</label>
                     <input id=security_code type="text" minlength="8" maxlength="8"><span id="err10"></span>
+                </div>
+                <div>
+                    <label for="comments">Comments:</label>
+                    <div id="comment-box">
+                        <textarea name="comments" id="comments" cols="25" rows="4"></textarea>
+                        <span id="character_count">0/100</span>
+                    </div>
                 </div>
                 <div>
                     <label for="order_button"></label>

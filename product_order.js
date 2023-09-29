@@ -1,4 +1,4 @@
-// Sasha Cheek Sept 9 2023
+// Sasha Cheek Sept 29 2023
 
 // Calculates the total cost of the order and displays it
 function calcTotal(valid) {
@@ -132,6 +132,16 @@ function validation() {
     return valid;
 }
 
+function limitText() {
+    var comments = U.$('comments');
+    var count = comments.value.length; 
+    if (count > 100) {
+    comments.value = comments.value.slice(0, 100);
+    }
+    count = comments.value.length;   
+    U.$('character_count').innerHTML = count + "/100"; 
+}
+
 function init()
 {
     var order_button = document.getElementById("order_button");
@@ -153,6 +163,11 @@ function init()
         var currentDate = currentYear + "-" + (currentMonth) + "-" + (currentDay);
 
         order_date.value = currentDate;
+    }
+
+    var comments = U.$("comments");
+    if (comments) {
+        U.addEvent(comments, "input", limitText);
     }
 }
 
