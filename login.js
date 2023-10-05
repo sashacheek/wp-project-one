@@ -12,15 +12,9 @@ function login() {
             window.location="product_order.html"; 
             break;
         }
-        else {
-            var loginOutput = document.getElementById("login-output").innerHTML = errorMessage;
-        }
     }
+
+    document.getElementById("username_error").innerHTML = "";
+    document.getElementById("password_error").innerHTML = "";
+    validateLogin(givenUsername, givenPassword);
 }
-
-// function init() {
-//     var login_button = document.getElementById("login-button");
-//     login_button.onclick = function() {login()};
-// }
-
-// window.onload = init;

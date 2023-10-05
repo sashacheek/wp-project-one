@@ -6,6 +6,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <script src="validation_service.js"></script>
     <script src="product_order.js"></script>
     <script src="login.js"></script>
 </head>
@@ -16,12 +17,14 @@
                 <div>
                     <label for="username">Username: </label>
                     <input type="text" id="username" name="username">
+                    <span id="username_error"></span>
                 </div>
                 <div>
                     <label for="password">Password: </label>
                     <input type="text" id="password" name="password">
+                    <span id="password_error"></span>
                 </div>
-                <div>
+                <div class="form-container">
                     <label for="login-button"></label>
                     <input type="button" id="login-button" name="login-button" class="button" value="Login"> 
                 </div>

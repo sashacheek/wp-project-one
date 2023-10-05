@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="utilities.js"></script>
+    <script src="validation_service.js"></script>
     <script src="product_order.js"></script>
 </head>
 <body>
     <main>
         <div class="wrapper">
+            <div id="current_datetime"></div>
             <form action="order.php" id="order_form">
                 <div>
                     <label for="product">Product</label>
@@ -73,8 +75,13 @@
                     </div>
                 </div>
                 <div>
+                    <label for="terms-and-conditions">Terms and Agreement</label>
+                    <input type="checkbox" id="terms-and-conditions">
+                </div>
+                <div>
                     <label for="order_button"></label>
                     <input type="button" id="order_button" class="button" value="Place Order">
+                    <input type="button" id="reset_button" class="button" value="Reset">
                 </div>
             </form>
             <div class="output" id="output"></div>
