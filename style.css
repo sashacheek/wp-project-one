@@ -5,6 +5,7 @@
 body {
     background-image: url(img/background_img.avif);
     height: 100vh;
+    margin: 0;
 }
 
 form, form input, form select, div, span {
@@ -80,6 +81,76 @@ form span {
     padding: 0.5em;
     text-align: center;
 }
+
+/* Homepage */
+#interior-images {
+    height: 30vw;
+    width: 40vw;
+    max-width: 720px;
+    max-height: 540px;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-family: serif;
+}
+
+nav {
+    margin-bottom: 25px;
+}
+
+.categories {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.clear {
+    clear: both;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0 auto;
+}
+
+nav ul, nav li, nav a {
+    margin: 0;
+    padding: 0;
+}
+
+.category {
+    border: solid 1px #b7b9ab;
+    background-color: #fafaf9;
+    text-align: center;
+    width: 47%;
+    float: left;
+}
+
+.category-list {
+    display: none;
+    border-top: 1px solid #b7b9ab;
+    text-align: center;
+}
+
+/* nav li {
+    padding: px;
+} */
+
+/* nav ul li:hover ul {
+    display: block;
+    position: relative;
+} */
+
+nav a {
+    text-decoration: none;
+}
+
 
 @media screen and (max-width:500px) {
     main {
